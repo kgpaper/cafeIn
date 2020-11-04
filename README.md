@@ -39,3 +39,9 @@ Open CV를 이용한 카페 빈좌석 예약 시스템
 
 1. OpenCV강의 시작
 2. Spring 회원가입 구현
+
+
+구현 : 
+html5 + spring + firebase
+길도연 : 프론트 엔드단
+기호영 : 파이어베이스 auth, 구글 맵 지도 구현 
