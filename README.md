@@ -45,3 +45,7 @@ Open CV를 이용한 카페 빈좌석 예약 시스템
 html5 + spring + firebase
 길도연 : 프론트 엔드단
 기호영 : 파이어베이스 auth, 구글 맵 지도 구현 
+
+스토리 보드
+
+2명씩 git 
