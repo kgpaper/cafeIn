@@ -15,14 +15,14 @@ public class MemberController {
    @Autowired
     private MemberService memberService;
 
-   @GetMapping("/login") //Get value
+   @GetMapping("/min_test_login") //Get value
     public ModelAndView login(){
        ModelAndView mav = new ModelAndView("login");
        mav.addObject("member",new Member());
        return mav;
    }
 
-   @PostMapping("/login") //Post value
+   @PostMapping("/min_test_login") //Post value
     public String login(@ModelAttribute("member") Member member){
        Member oauthMember = memberService.login(member.getName(),member.getPw());
        System.out.print(oauthMember);
