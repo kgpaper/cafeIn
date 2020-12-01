@@ -1,27 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Firebase Realtime Database - Client Side</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="./cafein/src/main/resources/css/style.css">
+    <th:block th:replace="fragment/css :: cssFragment"></th:block>
+
+    <!-- Website Title -->
+    <title>Cafe'in - index</title>
 </head>
-<body>
-<main>
-    <form>
-        <label for="email">이메일</label><br>
-        <input type="text" name="email" id="email"><br>
-        <label for="nickname">별명</label><br>
-        <input type="text" name="nickname" id="nickname"><br>
-        <label for="password">비밀번호</label><br>
-        <input type="text" name="password" id="password"><br>
-        <button id="addBtn" class="btn waves-effect waves-light">Add</button>
-        <button id="updateBtn" class="btn waves-effect waves-light">Update</button>
-        <button id="removeBtn" class="btn waves-effect red darken-1">Remove</button>
-    </form>
-</main>
-<script src="./functions.js"></script>
+<body data-spy="scroll" data-target=".fixed-top">
+
+<th:block th:replace="fragment/nav :: navFragment"></th:block>
+
+<!-- Call Me -->
+<div id="callMe" class="form-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="text-container">
+                    <div class="section-title">CAFE'IN에 오신 것을 환영합니다!</div>
+                    <h2 class="white">회원가입</h2>
+                    <ul class="list-unstyled li-space-lg white">
+                        <li class="media">
+                            <i class="fas fa-square"></i>
+                            <div class="media-body">111</div>
+                        </li>
+                        <li class="media">
+                            <i class="fas fa-square"></i>
+                            <div class="media-body">222</div>
+                        </li>
+                        <li class="media">
+                            <i class="fas fa-square"></i>
+                            <div class="media-body">333</div>
+                        </li>
+                    </ul>
+                </div>
+            </div> <!-- end of col -->
+            <div class="col-lg-6">
+
+                <!-- Call Me Form -->
+                <form id="callMeForm" data-toggle="validator" data-focus="false">
+                    <div class="form-group">
+                        <input type="email" class="form-control-input" id="jemail" name="jemail" required>
+                        <label class="label-control" for="jemail">Email</label>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control-input" id="jname" name="jname" required>
+                        <label class="label-control" for="jname">이름</label>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control-input" id="jpw" name="jpw" required>
+                        <label class="label-control" for="jpw">비밀번호</label>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control-input" id="jpwcheck" name="jpwcheck" required>
+                        <label class="label-control" for="jpwcheck">비밀번호 확인</label>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group checkbox white">
+                        <input type="checkbox" id="lterms" value="Agreed-to-Terms" name="lterms" required>회원가입에 동의합니다
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="form-control-submit-button">회원 가입</button>
+                    </div>
+                    <div class="form-message">
+                        <div id="lmsgSubmit" class="h3 text-center hidden"></div>
+                    </div>
+                </form>
+                <!-- end of call me form -->
+
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</div> <!-- end of form-1 -->
+<!-- end of call me -->
+
+<th:block th:replace="fragment/footer :: footerFragment"></th:block>
+
+<th:block th:replace="fragment/script :: scriptFragmentFragment"></th:block>
+
 </body>
 </html>
