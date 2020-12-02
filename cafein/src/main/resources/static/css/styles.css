@@ -772,7 +772,7 @@ input[type='checkbox'] {
 /*    04. Header     */
 /*********************/
 .header {
-	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('../images/header-background.jpg') center center no-repeat;
+	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('../images/header-cafe.jpg') center center no-repeat;
 	background-size: cover;
 }
 
@@ -896,6 +896,9 @@ input[type='checkbox'] {
 /*     07. Services     */
 /************************/
 .cards-2 {
+	max-width: 15rem;
+	max-height: 30rem;
+	min-height: 0rem;
 	padding-top: 0rem;
 	padding-bottom: 0rem;
 	background-color: #fbfbfb;
@@ -911,8 +914,15 @@ input[type='checkbox'] {
 	text-align: center;
 }
 
+.cards-2 h6 {
+	text-align: center;
+}
+
+.cards-2 p {
+	text-align: center;
+}
+
 .cards-2 .card {
-	margin-bottom: 0.125rem;
 	border: none;
 	background-color: transparent;
 }
@@ -923,7 +933,6 @@ input[type='checkbox'] {
 }
 
 .cards-2 .card-body {
-	padding: 2.25rem 2rem 2.125rem 2rem;
 	border: 1px solid #ebe8e8;
 	border-bottom-left-radius: 0.375rem;
 	border-bottom-right-radius: 0.375rem;
@@ -949,14 +958,14 @@ input[type='checkbox'] {
 	margin-left: 0.625rem;
 }
 
-.cards-2 .price {
-	margin-bottom: 0.25rem;
+.cards-2 .personnel {
+	margin-bottom: 0.1rem;
 	color: #484a46;
 	font: 700 1rem/1.5rem "Montserrat", sans-serif;
 	text-align: center;
 }
 
-.cards-2 .price span {
+.cards-2 .personnel span {
 	color: #14bf98;
 }
 
@@ -1413,7 +1422,7 @@ input[type='checkbox'] {
 /**********************************/
 .lightbox-basic {
 	position: relative;
-	max-width: 62.5rem;
+	max-width: 40rem;
 	margin: 2.5rem auto;
 	padding: 1.5625rem;
 	border-radius: 0.25rem;
@@ -2012,8 +2021,8 @@ a:hover.back-to-top {
 
 	/* Extra Pages */
 	.ex-header {
-		padding-top: 11rem;
-		padding-bottom: 9rem;
+		padding-top: 9rem;
+		padding-bottom: 5rem;
 	}
 
 	.ex-basic-2 .form-container {
