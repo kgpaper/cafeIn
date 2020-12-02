@@ -39,7 +39,7 @@
     <!-- end of privacy content -->
 
     <th:block th:replace="fragment/footer :: footerFragment"></th:block>
-    <th:block th:replace="fragment/script :: scriptFragmentFragment"></th:block>
+    <th:block th:replace="fragment/script :: scriptFragment"></th:block>
     <script>
         var mapOptions = {
             center: new naver.maps.LatLng(35.136683, 129.1005749),
@@ -47,7 +47,8 @@
             scaleControl: false,
             logoControl: false,
             mapDataControl: false,
-            zoomControl: true
+            zoomControl: true,
+            useStyleMap:true
         };
 
         const markerOptions = {
@@ -96,17 +97,37 @@
             }
         });
 
-        var contentString = [
-            '<div class="iw_inner">',
-            '   <h3>경성대 할리스 1호점</h3>',
-            '   <p>부산 남구 용소로 7 청라빌딩<br /></p>',
-            '	<img src="images/hollys1.jpeg" width="140" height="120" alt="경성대 할리스 1호점1" class="thumb" /><br />',
-            '   <p><a href="#">예약하기</a></p>',
+        var cafeContent =[
+            '<div class = "cards-2">',
+            '   <div class="card">',
+            '       <div class="card-image">',
+            '           <img class="img-fluid" src="images/services-1.jpg" alt="alternative">',
+            '       </div>',
+            '      <div class="card-body">',
+            '          <h3 class="card-title">할리스커피 경성대 1호점</h3>',
+            '          <p>주소</p>',
+            '          <ul class="list-unstyled li-space-lg">',
+            '              <li class="media">',
+            '                  <i class="fas fa-square"></i>',
+            '                  <div class="media-body">1</div>',
+            '              </li>',
+            '              <li class="media">',
+            '                  <i class="fas fa-square"></i>',
+            '                  <div class="media-body">2</div>',
+            '              </li>',
+            '          </ul>',
+            '              <p class="price"><span>예약하기</span></p>',
+            '      </div>',
+            '      <div class="button-container">',
+            '          <a class="btn-solid-reg page-scroll" href="#">예약하기</a>',
+            '      </div>',
+            '   </div>',
             '</div>'
         ].join('');
 
+
         var infowindow = new naver.maps.InfoWindow({
-            content: contentString
+            content: cafeContent
         });
 
         naver.maps.Event.addListener(marker, "click", function(e) {
