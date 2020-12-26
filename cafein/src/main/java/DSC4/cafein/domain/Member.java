@@ -1,27 +1,8 @@
 package DSC4.cafein.domain;
 
-import org.springframework.boot.autoconfigure.domain.EntityScan;
 
-import javax.persistence.*;
 
-@Entity
-@Table(name="login")
 public class Member {
-    @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-
-    private String email;
-    private String name;
-    private String pw;
-    public Member(){
-
-    }
-
-    public Member(String email,String name,String pw){
-        this.email = email;
-        this.name = name;
-        this.pw = pw;
-    }
 
     public String getEmail() {
         return email;
@@ -31,23 +12,34 @@ public class Member {
         this.email = email;
     }
 
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return username;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public String getPw() {
-        return pw;
+    public String getId() {
+        return id;
     }
 
-    public void setPw(String pw) {
-        this.pw = pw;
+    public void setId(String id) {
+        this.id = id;
     }
 
+    public String getPassword() {
+        return password;
+    }
 
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    private String email;
+    private String username;
+    private String id;
+    private String password;
 
 
 

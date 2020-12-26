@@ -1,4 +1,4 @@
-package DSC4.cafein.repository;
+/*package DSC4.cafein.repository;
 
 import DSC4.cafein.domain.Member;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -10,3 +10,4 @@ public interface MemberRepository extends JpaRepository<Member,String> {
 }
 //public class MemberRepository {
 //}
+*/

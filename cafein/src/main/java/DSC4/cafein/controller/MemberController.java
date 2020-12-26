@@ -1,4 +1,4 @@
-package DSC4.cafein.controller;
+/*package DSC4.cafein.controller;
 
 import DSC4.cafein.domain.Member;
 import DSC4.cafein.service.MemberService;
@@ -33,6 +33,10 @@ public class MemberController {
            return "redirect:/login";
        }
    }
+
+
+ */
+
   /*  @Autowired
     FirebaseService firebaseService;
 
@@ -45,4 +49,4 @@ public class MemberController {
     public Member createMember(@RequestBody Member member){
         return firebaseService.;
     }*/
-}
+//}
