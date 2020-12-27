@@ -14,10 +14,10 @@ import org.springframework.stereotype.Service;
 public class FirebaseServiceImpl implements FirebaseService{
     public static final String COLLECTION_NAME = "Member";
     @Override
-    public String insertMember(Member member) throws Exception{
+    public String joinMember(Member member) throws Exception{
         Firestore firestore = FirestoreClient.getFirestore();
         ApiFuture<com.google.cloud.firestore.WriteResult> apiFuture =
-                firestore.collection(COLLECTION_NAME).document(member.getId()).set(member);
+                firestore.collection(COLLECTION_NAME).document(member.getEmail()).set(member);
         return apiFuture.get().getUpdateTime().toString();
     }
 
@@ -42,7 +42,7 @@ public class FirebaseServiceImpl implements FirebaseService{
     public String updateMember(Member member) throws Exception {
         Firestore firestore = FirestoreClient.getFirestore();
         ApiFuture<com.google.cloud.firestore.WriteResult> apiFuture
-                = firestore.collection(COLLECTION_NAME).document(member.getId()).set(member);
+                = firestore.collection(COLLECTION_NAME).document(member.getEmail()).set(member);
         return apiFuture.get().getUpdateTime().toString();
     }
 

@@ -14,8 +14,8 @@ public class RestController {
     FirebaseService firebaseService;
 
     @GetMapping("/insertMember")
-    public String insertMember(@RequestParam Member member) throws Exception{
-        return firebaseService.insertMember(member);
+    public String joinMember(@RequestParam Member member) throws Exception{
+        return firebaseService.joinMember(member);
     }
 
     @GetMapping("/getMemberDetail")

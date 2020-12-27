@@ -4,23 +4,10 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
     <th:block th:replace="fragment/css :: cssFragment"></th:block>
-    <link href="css/seat.css"  rel="stylesheet">
-    <script src="js/seat.js"></script>
-    <script>
-        window.addEventListener("load", function(){
-            var cinema = new Hacademy.Reservation("#cafeseat");
-            cinema.addChangeListener(function(seat){
-                print(this);
-            });
-            print(cinema);
-            function print(app){
-                document.querySelector(".result").textContent = app.getQueryString();
-            }
-        });
-    </script>
+    <link href="css/seat1.css"  rel="stylesheet">
     <!-- Website Title -->
     <title>Cafe'in - Reserve</title>
-</had>
+</head>
 <body data-spy="scroll" data-target=".fixed-top">
 
 <th:block th:replace="fragment/nav :: navFragment"></th:block>
@@ -48,29 +35,40 @@
             <div class="col-lg-6">
                 <div>
                     <form action="/reserve" method="post">
-                        <div id="cafeseat" class="cinema-wrap" data-name="seat">
-                            <div class="cinema-seat-area" data-rowsize="4" data-colsize="5" data-mode="client" data-fill="manual" data-seatno="visible">
-                                <div class="cinema-seat" data-row="1" data-col="1"></div>
-                                <div class="cinema-seat" data-row="1" data-col="2"></div>
-                                <div class="cinema-seat" data-row="1" data-col="3" data-state="space"></div>
-                                <div class="cinema-seat" data-row="1" data-col="4"></div>
-                                <div class="cinema-seat" data-row="1" data-col="5"></div>
-                                <div class="cinema-seat" data-row="2" data-col="1"></div>
-                                <div class="cinema-seat" data-row="2" data-col="2" data-state="disabled"></div>
-                                <div class="cinema-seat" data-row="2" data-col="3" data-state="space"></div>
-                                <div class="cinema-seat" data-row="2" data-col="4" data-state="space"></div>
-                                <div class="cinema-seat" data-row="2" data-col="5" data-state="space"></div>
-                                <div class="cinema-seat" data-row="3" data-col="1" data-state="space"></div>
-                                <div class="cinema-seat" data-row="3" data-col="2" data-state="space"></div>
-                                <div class="cinema-seat" data-row="3" data-col="3" data-state="space"></div>
-                                <div class="cinema-seat" data-row="3" data-col="4"></div>
-                                <div class="cinema-seat" data-row="3" data-col="5"></div>
-                                <div class="cinema-seat" data-row="4" data-col="1"></div>
-                                <div class="cinema-seat" data-row="4" data-col="2"></div>
-                                <div class="cinema-seat" data-row="4" data-col="3" data-state="space"></div>
-                                <div class="cinema-seat" data-row="4" data-col="4"></div>
-                                <div class="cinema-seat" data-row="4" data-col="5"></div>
-                            </div>
+                        <div class="seatcheck">
+                            <input type="checkbox" id="seat1">
+                            <label for="seat1">
+                                <div class="seat">1</div>
+                            </label>
+                            <input type="checkbox" id="seat2">
+                            <label for="seat2">
+                                <div class="seat">2</div>
+                            </label>
+                            <input type="checkbox" id="seat3">
+                            <label for="seat3">
+                                <div class="seat">3</div>
+                            </label>
+                            <input type="checkbox" id="seat4">
+                            <label for="seat4">
+                                <div class="seat">4</div>
+                            </label>
+                            <input type="checkbox" id="seat5">
+                            <label for="seat5">
+                                <div class="seat">5</div>
+                            </label>
+                            <input type="checkbox" id="seat6">
+                            <label for="seat6">
+                                <div class="seat">6</div>
+                            </label>
+                            <input type="checkbox" id="seat7">
+                            <label for="seat7">
+                                <div class="seat">7</div>
+                            </label>
+                            <input type="checkbox" id="seat8">
+                            <label for="seat8">
+                                <div class="seat">8</div>
+                            </label>
+
                         </div>
                         <div class="form-group">
                             <button type="submit" class="form-control-submit-button">예약하기</button>

@@ -1,0 +1,20 @@
+.seatcheck input[type="checkbox"]+label .seat{
+    width: 85px;
+    height: 85px;
+    padding-left: 38px;
+    padding-top: 28px;
+    background: url('../images/seat-available.png') no-repeat 0 0px / contain;
+    cursor:pointer;
+}
+
+.seatcheck input[type='checkbox']:checked+label .seat{
+    background: url('../images/seat-select.png') no-repeat 0 1px / contain;
+}
+
+.seatcheck input[type='checkbox']:disabled+label .seat{
+    background: url('../images/seat-disable.png') no-repeat 0 1px / contain;
+}
+
+.seatcheck input[type="checkbox"] {
+    display: none;
+}
