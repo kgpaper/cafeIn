@@ -5,13 +5,49 @@
 <head>
     <th:block th:replace="fragment/css :: cssFragment"></th:block>
     <!-- Website Title -->
-    <title>Cafe'in - Reserve</title>
+    <title>Cafe'in - MyPage</title>
 </head>
 <body data-spy="scroll" data-target=".fixed-top">
 
 <th:block th:replace="fragment/nav :: navFragment"></th:block>
 
+<!-- Header -->
+<header id="header" class="ex-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>마이페이지</h1>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</header> <!-- end of ex-header -->
+<!-- end of header -->
 
+<!-- people -->
+<div id="contact" class="form-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="text-container">
+                    <h2>회원정보</h2>
+                    <div class="section-title">E-mail</div>
+                    <ul class="list-unstyled li-space-lg">
+                        <li><i class="fas fa-envelope"></i>empty@pknu.com</li>
+                    </ul>
+                    <div class="section-title">회원이름</div>
+                    <ul class="list-unstyled li-space-lg">
+                        <li><i class="fas fa-child"></i>홍길동</li>
+                    </ul>
+                    <div class="section-title">전화번호</div>
+                    <ul class="list-unstyled li-space-lg">
+                        <li><i class="fas fa-phone"></i>010-1234-5678</li>
+                    </ul>
+                </div> <!-- end of text-container -->
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</div>
+<!-- end of people -->
 
 <th:block th:replace="fragment/footer :: footerFragment"></th:block>
 </body>
