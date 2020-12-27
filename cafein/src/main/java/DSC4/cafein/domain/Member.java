@@ -1,7 +1,6 @@
 package DSC4.cafein.domain;
 
 
-
 public class Member {
 
     public String getEmail() {

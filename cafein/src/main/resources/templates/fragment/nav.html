@@ -87,20 +87,21 @@
                         <h3>Log In</h3>
                         <hr class="line-heading">
                         <h6>로그인</h6>
-                        <form id="loginForm" data-toggle="validator" data-focus="false" action="" method="post">
+                        <form id="loginForm" data-toggle="validator" data-focus="false" action="/" method="post">
                             <div class="form-group">
-                                <input type="email" class="form-control-input" id="lemail" required>
+                                <input type="email" class="form-control-input" id="lemail" name="lemail" required>
                                 <label class="label-control" for="lemail">Email</label>
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control-input" id="lpw" required >
+                                <input type="password" class="form-control-input" id="lpw" name="lpw" required >
                                 <label class="label-control" for="lpw">비밀번호</label>
                                 <div class="help-block with-errors"></div>
                             </div>
                             <a class="btn-outline-reg mfp-close as-button" href="join">회원가입</a>
-                            <a class="btn-outline-reg mfp-close as-button" href="#">ID 찾기</a>
-                            <a class="btn-solid-reg" href="#" style="float: right">LOGIN</a>
+                            <div class="form-group">
+                                <button type="submit" class="form-control-submit-button">로그인</button>
+                            </div>
                         </form>
                     </div> <!-- end of col -->
                 </div> <!-- end of row -->
