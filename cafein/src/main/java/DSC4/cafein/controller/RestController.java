@@ -46,15 +46,20 @@ public class RestController {
     }
 
     //seat
-    @GetMapping("/updateSeat")
-    public String updateSeat(@RequestParam String id) throws Exception{
-        return firebaseService.updateSeat(id);
+    @GetMapping("/freeSeat")
+    public String freeSeat(@RequestParam String id) throws Exception{
+        return firebaseService.freeSeat(id);
+    }
+
+    @GetMapping("/occupySeat")
+    public String occupySeat(@RequestParam String id) throws Exception{
+        return firebaseService.occupySeat(id);
     }
 
 
 
 
-
+//
 //    //  "/reserve" 이면서 POST 했을 경우 맵핑
 //    @RequestMapping(value = "/reserve", method= RequestMethod.POST)
 //    public String insertSubmit(HttpServletRequest request, HttpServletResponse response){
