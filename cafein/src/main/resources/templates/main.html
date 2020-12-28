@@ -20,7 +20,7 @@
                     <div class="col-lg-12">
                         <div class="text-container">
                             <h1>카페 자리가 <span id="js-rotating">남았을까?, 꽉 찼을까?</span></h1>
-                            <a class="btn-solid-lg page-scroll" href="search">카페 찾기</a>
+                            <a th:if="${session.memberId != null}" class="btn-solid-lg page-scroll" href="search">카페 찾기</a>
                         </div>
                     </div> <!-- end of col -->
                 </div> <!-- end of row -->

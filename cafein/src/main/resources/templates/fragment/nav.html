@@ -60,53 +60,23 @@
 
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
+            <li th:if="${session.memberId != null}" class="nav-item">
                 <a class="nav-link page-scroll" href="search">SEARCH</a>
             </li>
 
-            <!-- Dropdown Menu -->
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">TEST</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="../terms-conditions.html"><span class="item-text">Dropdown 구현1</span></a>
-                    <div class="dropdown-items-divide-hr"></div>
-                    <a class="dropdown-item" href="../privacy-policy.html"><span class="item-text">Dropdown 구현2</span></a>
-                </div>
-            </li>
-            <!-- end of dropdown menu -->
-
-            <li class="nav-item">
+            <li th:if="${session.memberId == null}" class="nav-item">
                 <a class="nav-link popup-with-move-anim" href="#loginModal">LOGIN</a>
             </li>
 
-            <!-- Lightbox -->
-            <div id="loginModal" class="lightbox-basic zoom-anim-dialog mfp-hide">
-                <div class="row">
-                    <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-                    <div class="col-12">
-                        <h3>Log In</h3>
-                        <hr class="line-heading">
-                        <h6>로그인</h6>
-                        <form id="loginForm" data-toggle="validator" data-focus="false" action="/" method="post">
-                            <div class="form-group">
-                                <input type="email" class="form-control-input" id="lemail" name="lemail" required>
-                                <label class="label-control" for="lemail">Email</label>
-                                <div class="help-block with-errors"></div>
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control-input" id="lpw" name="lpw" required >
-                                <label class="label-control" for="lpw">비밀번호</label>
-                                <div class="help-block with-errors"></div>
-                            </div>
-                            <a class="btn-outline-reg mfp-close as-button" href="join">회원가입</a>
-                            <div class="form-group">
-                                <button type="submit" class="form-control-submit-button">로그인</button>
-                            </div>
-                        </form>
-                    </div> <!-- end of col -->
-                </div> <!-- end of row -->
-            </div> <!-- end of lightbox-basic -->
-            <!-- end of lightbox -->
+            <li th:if="${session.memberId != null}" class="nav-item">
+                <a class="nav-link page-scroll" href="mypage">MYPAGE</a>
+            </li>
+
+            <li th:if="${session.memberId != null}" class="nav-item">
+                <a class="nav-link page-scroll" href="logout">LOGOUT</a>
+            </li>
+
+
 
         </ul>
         </div>
