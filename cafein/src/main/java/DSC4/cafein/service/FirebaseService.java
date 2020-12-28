@@ -11,5 +11,6 @@ public interface FirebaseService {
     public String deleteMember(String id) throws Exception;
 
     public Cafe getCafeDetail(String id) throws Exception;
-    public String updateSeat(String id) throws Exception;
+    public String freeSeat(String id) throws Exception;
+    public String occupySeat(String id) throws Exception;
 }
