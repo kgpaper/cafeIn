@@ -95,7 +95,7 @@ public class FirebaseServiceImpl implements FirebaseService{
                 = firestore.collection("cafe").document("cafe1")
                 .collection("curr_seat").document(id);
         ApiFuture<com.google.cloud.firestore.WriteResult> apiFuture
-                = docRef.update("avail",false,"customer","min");
+                = docRef.update("avail",false,"customer","kang");
         return "[ Occupy "+id+" ] "+apiFuture.get().getUpdateTime().toString();
     }
 
