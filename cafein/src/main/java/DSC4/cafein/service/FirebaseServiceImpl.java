@@ -85,7 +85,8 @@ public class FirebaseServiceImpl implements FirebaseService{
                 .collection("curr_seat").document(id);
         ApiFuture<com.google.cloud.firestore.WriteResult> apiFuture
                 = docRef.update("avail",true,"customer","");
-        return "[ Free "+id+" ] "+apiFuture.get().getUpdateTime().toString();
+        return "[ Free "+id+" ] ";
+        // return "[ Free "+id+" ] "+apiFuture.get().getUpdateTime().toString();
     }
 
     @Override
@@ -96,7 +97,7 @@ public class FirebaseServiceImpl implements FirebaseService{
                 .collection("curr_seat").document(id);
         ApiFuture<com.google.cloud.firestore.WriteResult> apiFuture
                 = docRef.update("avail",false,"customer","kang");
-        return "[ Occupy "+id+" ] "+apiFuture.get().getUpdateTime().toString();
+        return "[ Occupy "+id+" ] ";
     }
 
 
