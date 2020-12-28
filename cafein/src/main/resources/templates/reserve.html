@@ -27,7 +27,11 @@
                         </li>
                         <li class="media">
                             <i class="fas fa-square"></i>
-                            <div class="media-body">총 10 자리</div>
+                            <div class="media-body">총 <span th:text = "${total_s}"></span>자리 보유</div>
+                        </li>
+                        <li class="media">
+                            <i class="fas fa-square"></i>
+                            <div class="media-body">현재 <span th:text = "${occupied_s}"></span>자리 사용중</div>
                         </li>
                     </ul>
                 </div>
